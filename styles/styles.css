@@ -1,0 +1,489 @@
+/* layout */
+
+.header {
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  background-image: url(../images/mobile/image-header.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 50%;
+}
+
+.header nav.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 999;
+
+  transition: background 0.2s;
+}
+
+.header .text-content {
+  width: 100%;
+  position: absolute;
+
+  text-align: center;
+}
+
+.header .text-content.menu-show {
+  display: none;
+
+  transition: 0.2s;
+}
+
+.header .text-content p {
+  font-family: var(--fraunces);
+  font-size: 6rem;
+  letter-spacing: 1rem;
+  margin-bottom: 3rem;
+}
+
+/* navegation */
+
+nav.bg-yellow {
+  background-color: var(--dark-blue);
+}
+
+nav.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+nav.container .menu {
+  opacity: 0;
+  visibility: hidden;
+  top: -20rem;
+  transition: 0.2s;
+}
+
+nav.container .menu ul {
+  display: none;
+}
+
+.toggle {
+  cursor: pointer;
+}
+
+/* menu show */
+
+nav.show .menu {
+  opacity: 1;
+  visibility: visible;
+
+  background-color: var(--white);
+  width: 90%;
+  height: 60%;
+  border-radius: 0.3rem;
+
+  position: fixed;
+  top: 9rem;
+  right: 2.5rem;
+
+  display: grid;
+  place-items: center;
+}
+
+nav.show .menu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  align-items: center;
+}
+
+nav.show .menu li {
+  font-family: var(--barlow);
+}
+
+nav.show .menu li a {
+  color: var(--medium-grey);
+  font-size: 1.6rem;
+  cursor: pointer;
+  
+  position: relative;
+
+  transition: .2s;
+}
+
+nav.show .menu li a:hover {
+  background-color: var(--yellow);
+  color: #000;
+  padding: 1.5rem 2.5rem;
+  border-radius: 10rem;
+} 
+
+/* main */
+
+main {
+  position: relative;
+  width: 100%;
+}
+
+/* cards */
+
+.cards .section-card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.section-card .image-content img {
+  width: 100%;
+  height: 100%;
+}
+
+.section-card .text-content {
+  background-color: var(--white);
+  color: #000;
+  font-family: var(--fraunces);
+  text-align: center;
+
+  padding: 3rem;
+}
+
+.section-card .text-content .title {
+  margin-top: 3rem;
+  font-size: 4rem;
+}
+
+.section-card .text-content p {
+  font-family: var(--barlow);
+  margin-top: 3rem;
+  line-height: 3rem;
+  color: var(--medium-grey);
+}
+
+.section-card .text-content a {
+  display: inline-block;
+  margin-top: 4rem;
+
+  cursor: pointer;
+  border-bottom: 1rem solid var(--yellow);
+}
+
+.section-card:nth-child(2) .text-content a {
+  border-bottom: 1rem solid var(--soft-red);
+}
+
+.cards .cards2 {
+  position: relative;
+}
+
+.cards2 .section-card .text-content {
+  width: 100%;
+  position: absolute;
+  bottom: 10rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: transparent;
+}
+
+.cards2 .section-card .text-content h2, 
+.cards2 .section-card .text-content p {
+  color: var(--dark-cyan);
+}
+
+.cards2 .section-card:last-child .text-content h2, 
+.cards2 .section-card:last-child .text-content p {
+  color: var(--medium-blue);
+}
+
+/* testimonials */
+
+.testimonials {
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.testimonials .title {
+  margin-top: 8rem;
+  color: var(--light-grey);
+  font-family: var(--fraunces);
+  font-size: 2rem;
+  letter-spacing: 0.6rem;
+}
+
+.testimonial {
+  padding: 3rem;
+  margin-top: 4rem;
+}
+
+.testimonial .avatar-client {
+  width: 8rem;
+  border-radius: 50%;
+}
+
+.testimonial .testimonial-description {
+  font-family: var(--barlow);
+  color: var(--dark-grey);
+  line-height: 3.4rem;
+  margin-top: 3rem;
+}
+
+.testimonial .client-name {
+  font-family: var(--fraunces);
+  margin-top: 3rem;
+}
+
+.testimonial .client-profission {
+  font-family: var(--barlow);
+  color: var(--light-grey);
+  font-size: 1.4rem;
+  margin-top: 1rem;
+}
+
+/* grid pictures */
+
+.grid-pictures {
+  width: 100%;
+  margin-top: 6rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  overflow: hidden;
+}
+
+.grid-pictures img {
+  width: 100%;
+}
+
+/* footer */
+
+.footer {
+  width: 100%;
+  padding: 8rem;
+  background: var(--medium-cyan);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer .logo img {
+  width: 20rem;
+  cursor: pointer;
+}
+
+.footer .links {
+  width: 100%;
+  margin-top: 4rem;
+}
+
+.footer .links ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer .links a {
+  text-decoration: none;
+
+  color: var(--dark-cyan);
+  font-weight: 900;
+  font-family: var(--barlow);
+
+  transition: 0.2s;
+}
+
+.footer .links a:hover {
+  color: var(--white);
+  border-bottom: 0.2rem solid var(--white);
+}
+
+.footer .social-media {
+  width: 80%;
+  margin-top: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.footer .social-media a:hover {
+  transform: translateY(-0.8rem);
+  color: var(--white);
+  transition: 0.3s;
+}
+
+/* back to top */
+.back-to-top {
+  background: var(--dark-blue);
+
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+
+  padding: 1rem;
+  clip-path: circle();
+
+  visibility: hidden;
+  opacity: 0;
+
+  transition: .3s;
+  transform: translateY(100%);
+
+}
+
+.back-to-top.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* responsive */
+@media (min-width: 700px) {
+  .header {
+    background-image: url(../images/desktop/image-header.jpg);
+    background-size: cover;
+    transition: background .1s;
+  }
+
+  .header .container .logo img{
+    width: 18rem;
+  }
+
+  .cards .section-card {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+  }
+
+  .cards .section-card:nth-child(1) {
+    flex-direction: row-reverse;
+  }
+
+  .cards .section-card .image-content {
+    width: 50%;
+  }
+
+  .cards .section-card .image-content img.egg-image {
+    src: url(../images/desktop/image-transform.jpg);
+  }
+
+  .cards .section-card .image-content img.cup-image {
+    src: url(../images/desktop/image-stand-out.jpg);
+  }
+
+  .cards .section-card .text-content {
+    width: 50%;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cards .cards2 {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .cards .cards2 .section-card .image-content {
+    width: 100%;
+  }
+
+  .cards .cards2 .section-card .image-content img.acerola-image {
+    content: url(../images/desktop/image-graphic-design.jpg);
+  }
+
+  .cards .cards2 .section-card .image-content img.orange-image {
+    content: url(../images/desktop/image-photography.jpg);
+  }
+
+  .cards .cards2 .section-card .text-content {
+    width: 100%;
+    height: min-content;
+    padding: 0;
+    bottom: 1rem;
+  }
+
+  .testimonials-clients {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  main .grid-pictures {
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  footer#contact {
+    width: 100%;
+    background-color: var(--medium-cyan);
+  }
+
+  .footer {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .footer .links {
+    width: 60%;
+  }
+
+  .footer .social-media {
+    width: 40%;
+  }
+}
+
+@media (min-width: 900px) {
+
+  nav.container .menu {
+    visibility: visible;
+    opacity: 1;
+    top: 0;
+  }
+
+  nav.container .menu ul {
+    display: flex;
+    gap: 3rem;
+  }
+
+  nav.container .menu ul li a {
+    font-weight: 600;
+    font-size: 1.6rem;
+    font-family: var(--barlow);
+    color: var(--white);
+
+    transition: .2s;
+  }
+
+  nav.container .menu ul li a:hover {
+    border-bottom: .3rem solid var(--yellow);
+    color: var(--yellow);
+  }
+
+  nav.container .icon-menu {
+    display: none;
+  }
+
+  .cards .cards2 .section-card .text-content {
+    bottom: 3rem;
+  }
+
+  .footer {
+    width: 60%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .cards .cards2 .section-card .text-content {
+    bottom: 8rem;
+  }
+}
